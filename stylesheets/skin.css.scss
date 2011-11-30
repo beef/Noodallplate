@@ -1,0 +1,66 @@
+/* -------------- =SKIN -------------- */
+/* color, background etc */
+
+/* -------------- =SETUP -------------- */
+//@ Imports 
+@import "compass/css3";
+@import "base";
+
+/* -------------- =CONTENT -------------- */
+//Links
+a {
+  color: $link;
+  &:link {text-decoration:none;  }
+  &:visited{text-decoration:none;}
+  &:hover {
+    color: $rollover;
+    text-decoration: none;
+  }
+  &:active{text-decoration: none;}
+}
+
+//Lists
+
+
+/* -------------- =HEADER -------------- */
+
+/* -------------- =NAVIGATION -------------- */
+nav ul li {@include list_style_none;}
+
+/* -------------- =TEMPLATES -------------- */
+
+/* -------------- =ARTICLES -------------- */
+
+/* =Comments */
+
+/* =Pagination */
+
+/* -------------- =COMPONENTS -------------- */
+//.component{
+//  
+//  //  --------LARGE COMPONENTS
+//  &.large{
+//  
+//  }
+//  //  --------MEGA COMPONENTS
+//  &.mega {
+//   
+//  }
+//  
+//}
+
+/* -------------- =FOOTER -------------- */
+
+/* -------------- =ERRORS -------------- */
+
+/* -------------- =JS -------------- */
+
+/* ------------- =IMAGE REPLACEMENT  --------------- */
+//{
+//  overflow: hidden;
+//  text-align: left;
+//  display: block;
+//  line-height:0;
+//  text-indent: -1000em;
+//}
+

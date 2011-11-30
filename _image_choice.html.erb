@@ -1,0 +1,13 @@
+<%= render 'menu' %>
+<h2>Choose Image Size</h2>
+<div id="image-choices">
+  <div class="choice small" title="Small">
+      <%= image_tag @asset.url('180x116#', @asset.web_image_extension), :title => @asset.description, :alt => @asset.description, :longdesc => @asset.url('800x600', @asset.web_image_extension), :id => "asset-#{@asset.id}", :class => "content-image" %>  
+  </div>
+  <div class="choice medium" title="Medium">
+      <%= image_tag @asset.url('232x150#', @asset.web_image_extension), :title => @asset.description, :alt => @asset.description, :longdesc => @asset.url('800x600', @asset.web_image_extension), :id => "asset-#{@asset.id}", :class => "content-image" %>  
+  </div>
+  <div class="choice large" title="Large">
+      <%= image_tag @asset.url('420x271#', @asset.web_image_extension), :title => @asset.description, :alt => @asset.description, :longdesc => @asset.url('800x600', @asset.web_image_extension), :id => "asset-#{@asset.id}", :class => "content-image" %>  
+  </div>
+</div>

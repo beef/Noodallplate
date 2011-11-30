@@ -1,0 +1,20 @@
+/* -------------- =BASE -------------- */
+
+/* -------------- =VARIABLES -------------- */
+//Basic
+$background: #ffffff;
+$body: #000000;
+
+
+//Links
+$link: #ff0000;
+$rollover: #00ff00;
+
+
+/* -------------- =MIXINS -------------- */
+@mixin list_style_none {
+  background: none !important;
+  padding-left: 0;
+  list-style-type: none !important;
+  list-style-position: outside !important;
+}
