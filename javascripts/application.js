@@ -11,8 +11,13 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-// require jcarousellite_1.0.1.min
-// require jquery.fancybox-1.3.4
-// require slides.min.jquery
+// You will need to download latest versions of JS libaries, and add them to the vendor/assets/javascripts folder. 
+// Links to Libaries Beef commonly use: 
+//
+// Fancybox       : http://fancybox.net/jcars
+// jCarousel Lite : slidhttp://www.gmarwaha.com/jquery/jcarousellite/
+// Slides         : http://slidesjs.com/cu
+// Cufon          : http://cufon.shoqolate.com/generate/
+// Modernizr      : http://www.modernizr.com/
 //
 //= require base
