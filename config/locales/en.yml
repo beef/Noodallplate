@@ -1,0 +1,16 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  time:
+    formats:
+      short_dot: "%d.%m.%Y"
+      datetime: "%Y-%m-%d"
+  number:
+    currency:
+      format:
+        unit: '£'
+        format: '%u%n'
+  mongo_mapper:
+    models:
+      contact_form: Form
