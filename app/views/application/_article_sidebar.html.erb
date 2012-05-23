@@ -1,0 +1,58 @@
+<!-- TWITTER -->
+<div class="twitter-box">
+  <div id="tweets">
+  </div>
+  <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+</div>
+
+
+<!-- RELATED ARTICLES -->
+<% if @node.is_a?(Article) %>
+  <div class="component related-articles">
+    <%= related_articles %>
+  </div>
+<% end %>
+
+<!-- RECENT ARTICLES -->
+<div class="component latest-articles">
+  <h3 class="sup-title">Recent Articles</h3>
+  <ul id="latest-article-list">
+  <% @node.recent_articles(categories: params[:category], creator_id: ( author.id if author )).each do |article| %>
+    <li class="<%= cycle("first", "second", "third") %>">
+      <a href="<%= node_path(article) %>" title="<%= article.title %>" class="latest-link">
+        <span class="title"><%= article.title %></span>
+        <time datetime="<%= l article.published_at, :format => :datetime %>"><%= l article.published_at, :format => :short_dot %></time>
+      </a>
+    </li>
+  <% end %>
+  </ul>
+</div>
+
+<!-- CATEGORIES -->
+<div class="component categories">
+  <h3 class="sup-title">Categories</h3>
+  <ul id="categories-list">
+    <% for category in @node.all_categories %>
+      <%= link_for_filter_text(category, @node, category: category) %>
+    <% end %>
+  </ul>
+</div>
+
+<!-- ARCHIVE -->
+<div class="component archive">
+  <h3 class="sup-title">Archive</h3>
+  <ul id="archive-list">
+    <% @node.archive(categories: params[:category], creator_id: ( author.id if author )).each do |year| %>
+    <li>
+      <%= link_for_year_filter(@node, year) %>
+      <% if (params[:year] || Time.now.year).to_i == year.year %>
+        <ul>
+          <% year.months.each_with_index do |count, month| %>
+           <%= link_for_month_filter(@node, year, month, count) %>
+          <% end -%>
+        </ul>
+      <% end -%>
+    </li>
+    <% end -%>
+  </ul>
+</div>

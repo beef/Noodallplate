@@ -1,0 +1,34 @@
+<p class="section-title">Sign In</p>
+
+<div class="main-content">
+  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  
+
+    <div class="form-wrap">
+      <%= f.label :email %>
+       <%= f.email_field :email, :class => "required" %>
+    </div>
+  
+    <div class="form-wrap">
+      <%= f.label :password %>
+      <%= f.password_field :password, :class => "required" %>
+    </div>
+  
+    <% if devise_mapping.rememberable? -%>
+      <div class="form-wrap">
+        <%= f.label :remember_me %>
+        <%= f.check_box :remember_me %> 
+      </div>
+    <% end -%>
+
+    <p class="buttons"><%= f.submit "Sign in" %></p>
+    <p><%= render :partial => "devise/shared/links" %></p>
+  <% end %>
+
+</div>
+
+<div class="supporting-content">
+
+</div>
+
+<%= render :partial => 'application/social_bar' %>

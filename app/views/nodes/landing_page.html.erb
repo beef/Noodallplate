@@ -1,0 +1,11 @@
+<%#= component @node, 'carousel_slot_0' %>
+<div class="main-content">
+  <h1><%= @node.title %></h1>
+  <%= @node.body.html_safe %>
+  <div class="row first"><%#= component_row(@node, 'small_slot_0','small_slot_1','small_slot_2') %></div>
+  <div class="row second"><%#= component_row(@node, 'small_slot_3','small_slot_4','small_slot_5') %></div>
+</div>
+
+<div class="supporting-content">
+  <%#= render :partial => 'application/tree_nav' %>
+</div>

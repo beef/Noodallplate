@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title></title>
+  <title><%= page_title %></title>
   <!-- so:meta-->
   <meta charset="utf-8">
   <meta name="robots" content="all" />
@@ -15,8 +15,8 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="content-language" content="en" />
   
-  <meta name="author" content="Site Title" />
-  <meta name="copyright" content="<%= Time.now.year %>, Site Title" />
+  <meta name="author" content="SITE TITLE" />
+  <meta name="copyright" content="<%= Time.now.year %>, SITE TITLE" />
   
   <meta name="Geo.Country" content="GB" />
   <meta name="Geo.Region" content="GB-BST" />
@@ -78,14 +78,19 @@
         </ul>
       </nav>
     </header>
-    <div class="content">   
+    <div class="content">
+      
       <%= flash_messages %>
+      
       <%= form_tag(noodall_search_path, :method => :get, :class => 'search') do %>
         <%= text_field_tag :q, params[:q] || 'Enter keyword(s) here'  %>
         <%= submit_tag 'Search' %>
       <% end %>
+      
       <%= yield %>
+      
     </div>
+    
     <footer class="site-footer"></footer>
   </div>
   <!-- so:JavaScripts -->

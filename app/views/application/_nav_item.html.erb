@@ -1,0 +1,8 @@
+<li>
+<span <%= "class='current'" if @node == nav_item %>><%= link_to_unless_current nav_item.name, node_path(nav_item)  %></span>
+<% if !nav_item.is_a?(ArticleList) and (@node.path.include?(nav_item.id) or @node == nav_item) and (nav_children = nav_item.children.published.all).any? %>
+    <ul>
+      <%= render :partial => 'application/nav_item', :collection => nav_children %>
+    </ul>
+  <% end %>
+</li>

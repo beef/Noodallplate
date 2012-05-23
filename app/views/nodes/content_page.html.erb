@@ -1,0 +1,19 @@
+<div class="main-content">
+  <h1><%= @node.title %></h1>
+  <%= @node.body.html_safe %>
+  <%#= component @node, 'large_slot_0' %>
+  <%#= component @node, 'large_slot_1' %>
+  <%#= component @node, 'large_slot_2' %>
+</div>
+
+<div class="supporting-content">
+  <%#= render :partial => 'application/tree_nav' %>
+  <%#= component @node, 'small_slot_0' %>
+  <%#= component @node, 'small_slot_1' %>
+</div>
+
+<div class="supplementary-content">
+  <%#= component @node, 'small_slot_2' %>
+  <%#= component @node, 'small_slot_3' %>
+  <%#= component @node, 'small_slot_4' %>
+</div>

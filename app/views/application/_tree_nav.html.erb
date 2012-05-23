@@ -1,0 +1,5 @@
+<% unless @node.root.children.published.empty? %>
+  <ul id="section-nav">
+    <%= render :partial => 'application/nav_item', :collection => @node.root.children.published.all %>
+  </ul>
+<% end %>
