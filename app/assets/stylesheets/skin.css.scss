@@ -19,7 +19,19 @@ a {
   &:active{text-decoration: none;}
 }
 
-//Lists
+//Table
+table {
+  tr{
+    &:first-child td {border-top:0;}
+    td{
+      border-top: solid 1px $body;
+      border-left: solid 1px $body;
+      &:first-child{border-left: 0;}
+     } //td
+  } //tr
+   thead tr td {background: $rollover;}
+} //table
+
 
 
 /* -------------- =HEADER -------------- */
@@ -56,11 +68,25 @@ nav ul li {@include list_style_none;}
 /* -------------- =JS -------------- */
 
 /* ------------- =IMAGE REPLACEMENT  --------------- */
-//{
-//  overflow: hidden;
-//  text-align: left;
-//  display: block;
-//  line-height:0;
-//  text-indent: -1000em;
-//}
+.site-title a,
+a.rss{
+  overflow: hidden;
+  text-align: left;
+  display: block;
+  line-height:0;
+  text-indent: -1000em;
+}
+
+.site-title a{
+  width: 126px;
+  height: 99px;
+  background:image-url("logo.png") 0 0 no-repeat;
+}
+
+a.rss{
+  width: 13px;
+  height: 13px;
+  background:image-url("rss.gif") 0 0 no-repeat;
+}
+
 
